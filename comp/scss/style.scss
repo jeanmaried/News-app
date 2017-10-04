@@ -1,0 +1,79 @@
+$background-color: black;
+$font-color: white;
+$font-family: opensans;
+$font-size: 1em;
+
+@font-face{
+	font-family: opensans;
+	src: url(../../assets/fonts/OpenSans-Light.ttf);
+}
+
+body{
+	font-size: $font-size;
+	background: $background-color; 
+	color: $font-color;
+	font-family: $font-family;
+}
+
+header{
+	height: 85%;
+	&.minified{
+		height: 15rem;
+		img{
+			width: 7rem;
+		}
+	}
+}
+
+h1{
+	color: $font-color;
+}
+
+#dropdown{
+	font-size: .9rem;
+	width: 7rem;
+}
+
+footer{
+	color: #c9cdd3;
+	display: flex;
+}
+
+.newsBlock{
+	width:100%;
+}
+
+.img_class{
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 55%;
+	display: flex;
+	align-items: flex-end;
+}
+
+.abstract{
+	background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+	line-height: 200%;
+	padding: .5rem;
+	width: 100%;
+}
+
+.copyright{
+	height: 6rem;
+}
+
+.margin_one{
+	margin-bottom: 3rem;
+}
+
+.margin-two{
+	margin: 0 0 1.5rem 0;
+}
+
+.margin-top-bottom{
+	margin: 8rem 0 11rem 0;
+}
+
+.margin_three{
+	margin: 2rem
+}
