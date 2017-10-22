@@ -8,7 +8,7 @@
 		margin-left: 2rem;
 	}
 
-	.img_class{
+	.newsItem{
 		width: 25%;
 	}
 
@@ -28,17 +28,17 @@
 		flex-direction: column;
 	}
 
-	.newsBlock{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
+	// .newsBlock{
+	// 	display: flex;
+	// 	flex-direction: row;
+	// 	flex-wrap: wrap;
+	// }
 
 
 }
 
 @media screen and (min-width: 600px) and (max-width:999px){
-	.img_class{
+	.newsItem{
 		width: 50%;
 	}
 }
