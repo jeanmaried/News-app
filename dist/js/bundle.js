@@ -1,12 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-$(document).ready(function () {
-	var selected = $("#dropdown option:selected").val();
-	if (selected == "sections") {
-		selected = "home";
-		apiCall(selected);
-	}
-});
-
 $("#dropdown").on("change", function () {
 	var selected = $("#dropdown option:selected").val();
 	if (selected == "sections") {
@@ -26,31 +18,12 @@ apiCall = function (selected) {
 		url: url,
 		method: 'GET'
 	}).done(function (result) {
-		if (selected == "home") {
-			populateDropdown(result);
-		} else {
+		if (selected !== "home") {
 			populateArticles(result);
 		}
 	}).fail(function (err) {
 		throw err;
 	});
-};
-
-//Populating dropdown menu
-var populateDropdown = function (result) {
-	var dropdown_items = result.results;
-	for (i = 0; i < dropdown_items.length; i++) {
-		var dropdown = dropdown_items[i].section;
-		var id = dropdown.replace(/[^a-z0-9]/gi, '');
-		console.log(id);
-		var select_cat = $("<option id=" + dropdown + " value=" + id.toLowerCase() + ">" + dropdown + "</option>");
-		var alreadyExists = document.getElementById(dropdown);
-		if (!alreadyExists) {
-			$("#dropdown").append(select_cat);
-		} else {
-			null;
-		}
-	}
 };
 
 // Watching for changes to poppulate appropriate articles

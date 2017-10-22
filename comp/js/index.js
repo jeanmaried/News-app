@@ -1,11 +1,3 @@
-$( document ).ready(function(){
-	var selected = $("#dropdown option:selected").val();
-	if (selected == "sections"){
-		selected = "home";
-		apiCall(selected)
-	}
-});
-
 $("#dropdown").on("change", function(){
 	var selected = $("#dropdown option:selected").val();
 	if (selected == "sections"){
@@ -26,34 +18,13 @@ apiCall = function(selected){
 		url: url,
 		method: 'GET',
 	}).done(function(result) {
-		if (selected == "home"){
-			populateDropdown(result)
-		}
-		else {
+		if (selected !== "home"){
 			populateArticles(result)
 		}
 	}).fail(function(err) {
 		throw err;
 	});
 }
-
-//Populating dropdown menu
-var populateDropdown = function(result){
-	var dropdown_items = result.results;
-	for (i=0; i < dropdown_items.length; i++) {
-		var dropdown = dropdown_items[i].section;
-		var id = dropdown.replace(/[^a-z0-9]/gi,'');
-		console.log(id);
-			var select_cat = $("<option id="+dropdown+" value="+id.toLowerCase()+">"+dropdown+"</option>");
-			var alreadyExists = document.getElementById(dropdown);
-			if (!alreadyExists){
-				$("#dropdown").append(select_cat);
-			}
-			else{
-				null
-			}
-	}
-};
 
 // Watching for changes to poppulate appropriate articles
 var populateArticles = function(result){

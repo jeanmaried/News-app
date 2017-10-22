@@ -18,7 +18,7 @@ var OUTPUT_DIR = "./dist/js";
 var OUTPUT_FILE = "bundle.js";
 var DELAY = 50;
 
-var sassFiles = './comp/scss/style.scss';
+var sassFiles = './comp/scss/index.scss';
 var cssDest = './dist/css/';
 
 gulp.task("watch", function () {
