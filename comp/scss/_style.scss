@@ -24,10 +24,13 @@ header{
 	}
 }
 
+img{
+	max-width: 30rem;
+}
+
 #dropdown{
 	font-size: .9rem;
 	width: 7rem;
-	z-index: 1;
 }
 
 .newsItem{
@@ -51,4 +54,28 @@ header{
 
 .margin{
 	margin: 0 0 1.5rem 0;
+}
+
+@media screen and (min-width: 1000px){
+	.newsItem{
+		width: 25%;
+	}
+}
+
+@media screen and (min-width: 600px){
+	.resizing_one{
+		flex-direction: row;
+	}
+
+	.resizing_two{
+		display: flex;
+		flex-direction: column;
+	}
+
+}
+
+@media screen and (min-width: 600px) and (max-width:999px){
+	.newsItem{
+		width: 50%;
+	}
 }
