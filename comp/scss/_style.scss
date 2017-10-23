@@ -24,15 +24,6 @@ header{
 	}
 }
 
-img{
-	max-width: 30rem;
-}
-
-#dropdown{
-	font-size: .9rem;
-	width: 7rem;
-}
-
 .newsItem{
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -72,10 +63,27 @@ img{
 		flex-direction: column;
 	}
 
+	#dropdown{
+		font-size: .9rem;
+		width: 7rem;
+	}
+
 }
 
 @media screen and (min-width: 600px) and (max-width:999px){
 	.newsItem{
 		width: 50%;
 	}
+}
+
+@media screen and (max-width: 599px){
+	img{
+		width: 25rem;
+	}
+
+	#dropdown{
+		font-size: 1.2rem;
+		width: 9rem;
+	}
+
 }
