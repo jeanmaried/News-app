@@ -1,21 +1,7 @@
 @media screen and (min-width: 1000px){
-	.resizing_one{
-		justify-content: flex-start;
-	}
-
-	.copyright{
-		justify-content: flex-start;
-		margin-left: 2rem;
-	}
-
 	.newsItem{
 		width: 25%;
 	}
-
-	footer{
-		justify-content: flex-start;
-	}
-
 }
 
 @media screen and (min-width: 600px){
@@ -27,14 +13,6 @@
 		display: flex;
 		flex-direction: column;
 	}
-
-	.newsBlock{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-
-
 }
 
 @media screen and (min-width: 600px) and (max-width:999px){

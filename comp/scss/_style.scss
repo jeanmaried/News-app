@@ -1,23 +1,17 @@
-$background-color: black;
-$font-color: white;
-$font-family: opensans;
-$font-size: 1em;
-
 @font-face{
 	font-family: opensans;
 	src: url(../../assets/fonts/OpenSans-Light.ttf);
 }
 
-a{
-	color: white;
-	text-decoration: none;
+html{
+	background: black; 
 }
 
-body{
-	font-size: $font-size;
-	background: $background-color; 
-	color: $font-color;
-	font-family: $font-family;
+body, a{
+	color: white;
+	font-size: 1rem;
+	font-family: opensans;
+	text-decoration: none;
 }
 
 header{
@@ -30,35 +24,22 @@ header{
 	}
 }
 
-h1{
-	color: $font-color;
-}
-
 #dropdown{
 	font-size: .9rem;
 	width: 7rem;
-}
-
-footer{
-	color: #c9cdd3;
-	display: flex;
-}
-
-.newsBlock{
-	width:100%;
+	z-index: 1;
 }
 
 .newsItem{
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 55%;
-	
+	height: 20rem;
 	display: flex;
 	align-items: flex-end;
 }
 
 .abstract{
-	background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 	line-height: 200%;
 	padding: .5rem;
 	width: 100%;
@@ -68,18 +49,6 @@ footer{
 	height: 6rem;
 }
 
-.margin_one{
-	margin-bottom: 3rem;
-}
-
-.margin-two{
+.margin{
 	margin: 0 0 1.5rem 0;
-}
-
-.margin-top-bottom{
-	margin: 8rem 0 11rem 0;
-}
-
-.margin_three{
-	margin: 2rem
 }
