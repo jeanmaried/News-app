@@ -1,3 +1,3 @@
-3rd_project
+#News App
 
-This is the 3rd project I have done at RED Acedemy.
+Makes API calls with Ajax and jQuery to New York Times and displays articles by category.
