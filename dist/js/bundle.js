@@ -2,7 +2,7 @@
 $("#dropdown").on("change", function () {
 	var selected = $("#dropdown option:selected").val();
 	if (selected == "sections") {
-		$(".newsBlock").remove();
+		$(".newsItem").remove();
 		$("header").removeClass("minified");
 	} else {
 		apiCall(selected);
